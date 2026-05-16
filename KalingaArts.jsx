@@ -666,7 +666,7 @@ function AboutSection() {
 // SECTION 3 — COLLECTIONS  (cream background, maroon cards)
 // ═══════════════════════════════════════════════════════════════════════
 const COLLECTIONS = [
-  { title:'Wooden Handicrafts',        label:'Heritage Wood Arts',     desc:'Hand-carved wooden sculptures, decorative panels, furniture accents, and tribal artworks — each piece shaped by generational mastery.',   tag:'MOQ: 50 pcs',        img:'/img12.png', pos:'center' },
+  { title:'Wooden Handicrafts',        label:'Heritage Wood Arts',     desc:'Hand-carved wooden sculptures, decorative panels, furniture accents, and tribal artworks — each piece shaped by generational mastery.',   tag:'MOQ: 50 pcs',        img:'/wooden-handicraft-01.png', pos:'center', whiteBg:true },
   { title:'Spiritual & Pooja Décor',   label:'Sacred Artisanal Pieces',desc:'Handcrafted brass diyas, wooden mandirs, incense holders, and ritual objects for spiritual retailers worldwide.',                         tag:'Export Ready',       img:'/img9.png',  pos:'center top' },
   { title:'Luxury Gifting Collections',label:'Premium Bespoke Gifts',  desc:'Curated gift sets with handcrafted objects, luxury packaging, and customizable branding for premium gifting companies.',                   tag:'White Label',        img:'/img6.png',  pos:'center' },
   { title:'Home Décor & Lifestyle',    label:'Artisan Living',          desc:'Wall art, vases, decorative bowls, woven textiles, and curated lifestyle objects for interior designers and boutique stores.',            tag:'Designer Line',      img:'/img3.png',  pos:'center' },
@@ -689,7 +689,7 @@ function CollectionsSection() {
   );
 }
 
-function CollectionCard({ title, label, desc, tag, img, pos='center', index }) {
+function CollectionCard({ title, label, desc, tag, img, pos='center', whiteBg=false, index }) {
   const ref    = useRef(null);
   const inView = useInView(ref, { once:true, margin:'-60px 0px' });
   const [hov, setHov] = useState(false);
@@ -712,14 +712,19 @@ function CollectionCard({ title, label, desc, tag, img, pos='center', index }) {
       {/* Image area */}
       <div style={{ position:'relative', paddingBottom:'62%', overflow:'hidden' }}>
         {/* Real product photo */}
+        <div style={{ position:'absolute', inset:0, background: whiteBg ? C.parchment : 'transparent' }}/>
         <img src={img} alt={title} style={{
           position:'absolute', inset:0, width:'100%', height:'100%',
-          objectFit:'cover', objectPosition:pos,
+          objectFit: whiteBg ? 'contain' : 'cover',
+          objectPosition:pos, padding: whiteBg ? '12px' : 0,
           transform: hov ? 'scale(1.09)' : 'scale(1)',
           transition:'transform 0.75s ease',
+          mixBlendMode: whiteBg ? 'multiply' : 'normal',
         }}/>
         {/* Dark gradient overlay for text readability */}
-        <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top,rgba(30,5,10,0.75) 0%,rgba(30,5,10,0.25) 55%,rgba(30,5,10,0.1) 100%)' }}/>
+        <div style={{ position:'absolute', inset:0, background: whiteBg
+          ? 'linear-gradient(to top,rgba(123,22,38,0.55) 0%,rgba(123,22,38,0.1) 50%,transparent 100%)'
+          : 'linear-gradient(to top,rgba(30,5,10,0.75) 0%,rgba(30,5,10,0.25) 55%,rgba(30,5,10,0.1) 100%)' }}/>
         {/* Shimmer on hover */}
         <motion.div animate={{ opacity: hov ? 1 : 0 }} transition={{ duration:0.4 }}
           style={{ position:'absolute', inset:0, background:'linear-gradient(135deg,transparent 30%,rgba(255,255,255,0.07) 50%,transparent 70%)' }}/>
