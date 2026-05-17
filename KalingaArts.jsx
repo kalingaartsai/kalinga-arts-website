@@ -11,7 +11,7 @@ import {
 
 // ═══════════════════════════════════════════════════════════════════════
 // KALINGA ARTS — Handcrafted Heritage | Global Export
-// Manufacturer, Wholesaler & Exporter | Est. 2005 | Jaipur, Rajasthan
+// Manufacturer, Wholesaler & Exporter | Est. 1995 | Jaipur, Rajasthan
 // CEO: Mr. Mukesh Chauhan | +91 94140 74067
 // ═══════════════════════════════════════════════════════════════════════
 
@@ -224,7 +224,7 @@ function Navbar() {
             style={{ height:56, width:'auto', objectFit:'contain', transition:'opacity 0.3s', mixBlendMode:'multiply' }}
             onError={e=>{ e.target.style.display='none'; }}
           />
-          <span className="f-luxury ka-hide-mobile" style={{ fontSize:11, color:C.muted, letterSpacing:3, textTransform:'uppercase', marginLeft:4 }}>Est. 2005 · Jaipur, India</span>
+          <span className="f-luxury ka-hide-mobile" style={{ fontSize:11, color:C.muted, letterSpacing:3, textTransform:'uppercase', marginLeft:4 }}>Est. 1995 · Jaipur, India</span>
         </a>
 
         {/* Desktop nav */}
@@ -599,7 +599,7 @@ function AboutSection() {
             <Reveal delay={0.15}><div className="gold-bar" style={{ width:60, marginBottom:28 }}/></Reveal>
             <Reveal delay={0.2}>
               <p style={{ fontSize:15.5, lineHeight:1.85, color:C.body, marginBottom:20 }}>
-                Founded in 2005 by Mr. Mukesh Chauhan, Kalinga Arts was born from a deep reverence for
+                Founded in 1995 by Mr. Mukesh Chauhan, Kalinga Arts was born from a deep reverence for
                 Rajasthan's millennia-old artisan traditions — a land where every craft tells a royal story,
                 where blue pottery, block printing, and stone carving are not trades but sacred inheritances
                 passed across generations.
@@ -651,7 +651,7 @@ function AboutSection() {
               </div>
               {/* Floating accent card */}
               <div style={{ position:'absolute', bottom:-28, left:-28, background:C.maroon, padding:'20px 26px', border:`1px solid rgba(212,175,55,0.35)`, minWidth:180 }}>
-                <div className="f-display" style={{ fontSize:28, color:C.cream, fontWeight:700 }}>Est. 2005</div>
+                <div className="f-display" style={{ fontSize:28, color:C.cream, fontWeight:700 }}>Est. 1995</div>
                 <div style={{ fontSize:12, color:'rgba(253,246,238,0.75)', letterSpacing:2, textTransform:'uppercase' }}>Years of<br/>Craftsmanship</div>
               </div>
             </div>
@@ -1297,7 +1297,7 @@ function Footer() {
             <div className="f-display" style={{ fontSize:20, fontWeight:800, color:C.maroon, letterSpacing:1, marginBottom:4 }}>KALINGA ARTS</div>
             <div className="f-luxury" style={{ fontSize:12, color:C.goldDark, letterSpacing:4, textTransform:'uppercase', marginBottom:18 }}>Handcrafted Heritage · Global Export</div>
             <p style={{ fontSize:13.5, color:C.body, lineHeight:1.8, maxWidth:260, marginBottom:26 }}>
-              Manufacturer, Wholesaler &amp; Exporter of premium Indian handicrafts from Jaipur, Rajasthan. Est. 2005 by Mr. Mukesh Chauhan.
+              Manufacturer, Wholesaler &amp; Exporter of premium Indian handicrafts from Jaipur, Rajasthan. Est. 1995 by Mr. Mukesh Chauhan.
             </p>
             {/* Social */}
             <div style={{ display:'flex', gap:10 }}>
